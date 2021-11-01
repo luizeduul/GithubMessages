@@ -7,6 +7,9 @@ class GetLastThreeMessagesService {
       orderBy: {
         created_at: "desc",
       },
+      include: {
+        user: true,
+      },
     });
 
     return messages;
